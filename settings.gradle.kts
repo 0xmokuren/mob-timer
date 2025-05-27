@@ -1,1 +1,1 @@
-rootProject.name = "mob-timer"
+rootProject.name = "mobtimer"

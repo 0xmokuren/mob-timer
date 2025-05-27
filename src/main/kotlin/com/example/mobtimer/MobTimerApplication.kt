@@ -1,4 +1,4 @@
-package com.example.mob_timer
+package com.example.mobtimer
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class MobTimerApplication
 
 fun main(args: Array<String>) {
-	runApplication<MobTimerApplication>(*args)
+    runApplication<MobTimerApplication>(*args)
 }
