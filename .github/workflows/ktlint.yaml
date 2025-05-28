@@ -1,0 +1,28 @@
+name: ktlint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - '**/*.kt'
+      - '**/*.kts'
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ソースコードのチェックアウト
+        uses: actions/checkout@v3
+
+      - name: JDKのセットアップ
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ktlintの実行
+        run: ./gradlew ktlintCheck
